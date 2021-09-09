@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "867934025596",
+    "firebase_url": "https://chatapp-4402a-default-rtdb.firebaseio.com",
+    "project_id": "chatapp-4402a",
+    "storage_bucket": "chatapp-4402a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867934025596:android:a8b56cb82864dd732d16f9",
+        "android_client_info": {
+          "package_name": "com.dennisiluma.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867934025596-he259la7f6j59ojq6f4pagfv61fsji20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZKf0D-CS0zmB3uCPhkTSkawfqo5Q7NYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867934025596-he259la7f6j59ojq6f4pagfv61fsji20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
