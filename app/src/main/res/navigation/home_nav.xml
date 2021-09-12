@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeVPFragment">
+    <fragment
+        android:id="@+id/homeVPFragment"
+        android:name="com.dennisiluma.chatapp.ui.view.HomeVPFragment"
+        android:label="fragment_home_v_p"
+        tools:layout="@layout/fragment_home_v_p" />
+</navigation>

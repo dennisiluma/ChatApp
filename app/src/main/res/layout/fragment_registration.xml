@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/email_sign_up_fragment_root_layout"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".ui.view.RegistrationFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_46dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Create an Account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_user_name_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="46dp"
+            android:hint="User Name"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/major_color"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/major_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_registration_user_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:inputType="text"
+                android:textCursorDrawable="@color/major_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_phone_number_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_9dp"
+            android:hint="Phone Number"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/major_color"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/major_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_registration_phone_number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/major_color"
+                app:backgroundTint="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_gender_text_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_9dp"
+            app:boxStrokeColor="@color/major_color"
+            app:endIconDrawable="@drawable/arrow_down"
+            app:endIconTint="@color/black"
+            app:errorEnabled="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/fragment_registration_gender_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:inputType="none"
+                android:paddingBottom="@dimen/margin_18dp"
+                android:text="Select Your Gender"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/major_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_state_text_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_9dp"
+            app:boxStrokeColor="@color/major_color"
+            app:endIconDrawable="@drawable/arrow_down"
+            app:endIconTint="@color/black"
+            app:errorEnabled="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/fragment_registration_state_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:inputType="none"
+                android:paddingBottom="@dimen/margin_18dp"
+                android:text="Select Your State Of Residence"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_email_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_9dp"
+            android:hint="Email Address"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/major_color"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_registration_email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_password_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_9dp"
+            android:hint="Password"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/major_color"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_registration_email_edit_text_layout"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_registration_password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/major_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_registration_confirm_password_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_9dp"
+            android:hint="Confirm Password"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/major_color"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_registration_password_edit_text_layout"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_registration_confirm_password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/major_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_registration_signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_48dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingVertical="@dimen/padding_10dp"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            app:backgroundTint="@color/major_color"/>
+
+        <TextView
+            android:id="@+id/fragment_registration_have_account_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Have an Account"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragment_registration_login_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Login"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:padding="@dimen/padding_10dp"
+            android:textColor="@color/major_color"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>
