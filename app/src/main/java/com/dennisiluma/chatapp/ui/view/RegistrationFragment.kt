@@ -51,7 +51,8 @@ class RegistrationFragment : Fragment() {
 //            createAccount(email, password)
         }
     }
-                /*Signup new users*/
+
+    /*Signup new users*/
     private fun registerNewUser() {
         val userName = binding.fragmentRegistrationUserNameEditText.text.toString().trim()
         val email = binding.fragmentRegistrationEmailEditText.text.toString().trim()
@@ -125,8 +126,6 @@ class RegistrationFragment : Fragment() {
                 }
         }
     }
-
-
 
 
     override fun onDestroy() {

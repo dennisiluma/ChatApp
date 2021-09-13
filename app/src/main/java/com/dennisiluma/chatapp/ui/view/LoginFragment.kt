@@ -30,9 +30,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
         binding.fragmentLoginLogInButton.setOnClickListener{
-            val intent = Intent(requireActivity(), HomeActivity::class.java)
-            startActivity(intent)
-            requireActivity().finish()
+            logInUser()
         }
 
     }
@@ -51,6 +49,7 @@ class LoginFragment : Fragment() {
                         val intent = Intent(requireActivity(), HomeActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) //this will prevent back button to come to this activity_home
                         startActivity(intent)
+                        requireActivity().finish()
                     }else{
                         Toast.makeText(requireActivity(),"We Couldn't Sign in",Toast.LENGTH_SHORT).show()
                     }
