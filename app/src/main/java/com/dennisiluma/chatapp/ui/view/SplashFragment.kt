@@ -1,6 +1,7 @@
 package com.dennisiluma.chatapp.ui.view
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -11,27 +12,42 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.dennisiluma.chatapp.R
 import com.dennisiluma.chatapp.databinding.FragmentSplashBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class SplashFragment : Fragment() {
     private var _binding:FragmentSplashBinding? = null
     private val binding get() = _binding!!
+    private var  firebaseUser:FirebaseUser? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Handler(Looper.getMainLooper()).postDelayed({
 
-            if(collectSharedPreferences()){
-                findNavController().navigate(R.id.action_splashFragment_to_signupLoginFragment)
-            }else{
-                findNavController().navigate(R.id.action_splashFragment_to_onboardingViewPagerFragment)
-            }
-        }, 3000)
 
         // Inflate the layout for this fragment
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Handler(Looper.getMainLooper()).postDelayed({
+            firebaseUser = FirebaseAuth.getInstance().currentUser //get auth users instanace
+            if((collectSharedPreferences()) && (firebaseUser != null)){
+                val intent = Intent(requireActivity(), HomeActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
+            }
+            else if((collectSharedPreferences()) && (firebaseUser == null)){
+                findNavController().navigate(R.id.action_splashFragment_to_signupLoginFragment)
+
+            }else{
+                findNavController().navigate(R.id.action_splashFragment_to_onboardingViewPagerFragment)
+            }
+        }, 3000)
 
     }
     fun collectSharedPreferences():Boolean{

@@ -13,5 +13,10 @@
         android:icon="@drawable/more"
         android:title="more"
         app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/more"
+        android:title="more"
+        app:showAsAction="ifRoom|withText"/>
 
 </menu>

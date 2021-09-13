@@ -1,5 +1,6 @@
 package com.dennisiluma.chatapp.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import com.dennisiluma.chatapp.R
 import com.dennisiluma.chatapp.databinding.FragmentHomeVPBinding
 import com.dennisiluma.chatapp.ui.adapter.HomeVPAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeVPFragment : Fragment() {
     private var _binding:FragmentHomeVPBinding? = null
@@ -41,6 +43,14 @@ class HomeVPFragment : Fragment() {
             when (it.itemId) {
                 R.id.action_search -> {
                     // Navigate to settings screen
+                    true
+                }
+                R.id.action_logout -> {
+                    // Logout fragment
+                    FirebaseAuth.getInstance().signOut() //signout from google
+                    val intent = Intent(requireActivity(), StartActivity::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
                     true
                 }
                 R.id.action_more -> {
